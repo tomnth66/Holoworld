@@ -1,0 +1,143 @@
+html, body {
+  margin: 0;
+  padding: 0;
+}
+canvas {
+  display: block;
+}
+
+body{
+	background-color: #000;
+}
+
+p{
+  text-shadow: 0 2px 0 #ccc,
+               0 3px 0 #c9c9c9,
+               0 4px 0 #bbb,
+               0 5px 0 #b9b9b9,
+               0 6px 0 #aaa,
+               0 7px 1px rgba(0,0,0,.1),
+               0 0 5px rgba(0,0,0,.1),
+               0 1px 3px rgba(0,0,0,.3),
+               0 3px 5px rgba(0,0,0,.2),
+               0 5px 10px rgba(0,0,0,.25),
+               0 10px 10px rgba(0,0,0,.2),
+               0 20px 20px rgba(0,0,0,.15);
+               margin-bottom: 0px;
+               width: 150px;
+}
+
+.rotate90{
+	-webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    transform: rotate(90deg);
+
+    filter: brightness(2);	
+
+}
+
+.rotate180{
+	-webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    transform: rotate(180deg);
+
+    filter: brightness(2);	
+}
+
+
+
+.rotate270{
+	-webkit-transform: rotate(270deg);
+    -moz-transform: rotate(270deg);
+    -o-transform: rotate(270deg);
+    -ms-transform: rotate(270deg);
+    transform: rotate(270deg);
+
+    filter: brightness(2);	
+}
+
+.rotate-270{
+	-webkit-transform: rotate(-270deg);
+    -moz-transform: rotate(-270deg);
+    -o-transform: rotate(-270deg);
+    -ms-transform: rotate(-270deg);
+    transform: rotate(-270deg);
+
+    filter: brightness(2);	
+}
+
+.rotate-90{
+	-webkit-transform: rotate(-90deg);
+    -moz-transform: rotate(-90deg);
+    -o-transform: rotate(-90deg);
+    -ms-transform: rotate(-90deg);
+    transform: rotate(-90deg);
+
+    filter: brightness(2);	
+}
+
+.rotate360{
+	filter: brightness(2);
+}
+
+.spinner {
+  animation-name: spinner;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-duration: 9s;
+  transform-style: preserve-3d;
+  /*text-align:center;*/
+}
+@keyframes spinner {
+  from {
+    transform: rotateY(90deg);
+  }
+  to {
+    transform: rotateY(-360deg);
+  }
+}
+
+.spinner3 {
+  animation-name: spinner;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-duration: 9s;
+  transform-style: preserve-3d;
+  /*text-align:center;*/
+
+  direction: rtl;
+unicode-bidi: bidi-override; 
+}
+@keyframes spinner3 {
+  from {
+    transform: rotateY(90deg);
+  }
+  to {
+    transform: rotateY(360deg);
+  }
+}
+
+.flip{
+	  direction: rtl;
+	  unicode-bidi: bidi-override; 
+}
+
+.mirror{
+  display: inline-block;
+  transform: scaleY(-1); 
+  filter: FlipH; /* IE 6-7-8 */
+}
+
+.flipletter{
+  -webkit-transform:rotateY(180deg);
+  -moz-transform:rotateY(180deg);
+  -o-transform:rotateY(180deg);
+  -ms-transform:rotateY(180deg);
+  unicode-bidi:bidi-override;
+  direction:rtl;
+}
+
